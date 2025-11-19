@@ -73,4 +73,10 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
 - **Personas**: criada com base em fumantes de cigarro eletrônico  
 - **Storyboard**: jornada do usuário reduzindo o uso diário  
 - **UI Design**: paleta roxa/azul, tipografia arredondada, botões grandes  
-- **Prototipação**: elaborada no Figma 
+- **Prototipação**: elaborada no Figma
+
+- <p align="center">
+  <img src="persona-lucas.png" width="45%" />
+  <img src="persona-marina.png" width="45%" />
+  <img src="persona-marina.png" width="45%" />
+</p>

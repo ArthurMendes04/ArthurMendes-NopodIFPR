@@ -6,8 +6,6 @@
 
 Repositório oficial do projeto desenvolvido para a disciplina **Projeto Interdisciplinar I** do curso de **Gestão da Tecnologia da Informação – IFPR Campus Pinhais**.
 
-**Data de criação do projeto:** 19/11/2025
-
 ---
 
 # 1. Identificação
@@ -24,7 +22,7 @@ Logotipo disponível no topo do README e em `/assets/logo/`.
 ### 🔹 Forma de comunicação  
 - Reuniões semanais (presenciais)  
 - Grupo no WhatsApp  
-- Tarefas organizadas no Trello  
+- Tarefas organizadas no Notion  
 
 ---
 

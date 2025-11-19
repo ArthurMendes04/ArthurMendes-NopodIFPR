@@ -16,11 +16,11 @@ Logotipo disponível no topo do README e em `/assets/logo/`.
 ### 🔹 Equipe  
 | Nome | Papel | Responsabilidades |
 |------|--------|------------------|
-| **Arthur Mendes de Vasconcelos** | Product Owner / Dev Frontend | Visão do produto, protótipos, telas, frontend (React Native) |
-| **Kaoan Eduardo Pigaiani de Matos** | Scrum Master / Dev Backend | Organização do time, Firebase, autenticação, banco de dados |
+| **Arthur Mendes de Vasconcelos** | Product Ower e UX/UI Designer | Visão do produto, protótipos, telas, UX/UI |
+| **Kaoan Eduardo Pigaiani de Matos** | Desenvolvedor | Front-End e Back End | Firebase, autenticação, banco de dados |
 
 ### 🔹 Forma de comunicação  
-- Reuniões semanais (presenciais)  
+- Reuniões semanais presenciais e online
 - Grupo no WhatsApp  
 - Tarefas organizadas no Notion  
 
@@ -68,7 +68,7 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
 ---
 
 # 4. Design do Software
-
+- **Design Centrado no Usuário** (Formulário): https://forms.gle/2Wo5ryF5x1nNVgA8A
 - **Storyboard**
 - **Personas** 
 
@@ -78,4 +78,4 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
   <img src="Persona2.png" width="30%" />
 </p>
 
-- **Design Centrado no Usuário** (Formulário)  
+

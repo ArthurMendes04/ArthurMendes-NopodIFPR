@@ -79,4 +79,5 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
   <img src="Persona2.png" width="30%" />
 </p>
 
-
+# Extras
+⚙️ Diagramas de caso de uso e atividades podem ser encontrados no documento "Designer da solução do produto.pdf"

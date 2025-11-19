@@ -67,16 +67,15 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
 
 ---
 
-# 4. Design do Software (Resumo)
+# 4. Design do Software
 
-- **Design Centrado no Usuário** (entrevista + formulário)  
-- **Personas**: criada com base em fumantes de cigarro eletrônico  
-- **Storyboard**: jornada do usuário reduzindo o uso diário  
-- **UI Design**: paleta roxa/azul, tipografia arredondada, botões grandes  
-- **Prototipação**: elaborada no Figma
+- **Storyboard**
+- **Personas** 
 
-- <p align="center">
+<p align="center">
   <img src="StoryBoard.png" width="30%" />
   <img src="Persona1.png" width="30%" />
   <img src="Persona2.png" width="30%" />
 </p>
+
+- **Design Centrado no Usuário** (Formulário)  

@@ -76,7 +76,7 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
 - **Prototipação**: elaborada no Figma
 
 - <p align="center">
-  <img src="persona-lucas.png" width="45%" />
-  <img src="persona-marina.png" width="45%" />
-  <img src="persona-marina.png" width="45%" />
+  <img src="StoryBoard" width="45%" />
+  <img src="Persona1" width="45%" />
+  <img src="Persona2" width="45%" />
 </p>

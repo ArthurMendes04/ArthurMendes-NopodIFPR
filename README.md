@@ -69,6 +69,7 @@ Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiad
 
 # 4. Design do Software
 - **Design Centrado no Usuário** (Formulário): https://forms.gle/2Wo5ryF5x1nNVgA8A
+- **Protótipo feito no Figma** https://www.figma.com/proto/EdQdXCP4n99fCRMnscNMli/NoPod?node-id=0-1&t=zsj3O5a35omWvt68-1
 - **Storyboard**
 - **Personas** 
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="NoPod - Capa.png" width="260" alt="Logo NoPod">
+  <img src="NoPod - Capa.png" width="260" alt="NoPod - Capa.png">
 </p>
 
 # 📱 NoPod – Aplicativo para Ajudar a Parar o Uso do Cigarro Eletrônico

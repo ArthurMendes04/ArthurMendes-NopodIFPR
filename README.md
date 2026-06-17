@@ -30,31 +30,56 @@ A identidade visual do projeto NoPod está representada pelo logotipo disponíve
 
 # 2. Concepção
 
-### 🔹 Visão geral  
-O NoPod é um aplicativo mobile que auxilia usuários a reduzir ou abandonar o uso de cigarros eletrônicos através de monitoramento, metas personalizadas, exercícios de respiração e conteúdos educativos.
+### 🔹 Visão geral
 
-### 🔹 Objetivo  
-Oferecer uma ferramenta acessível e prática que apoie usuários no controle do vício em nicotina associado ao cigarro eletrônico.
+O NoPod é um aplicativo mobile desenvolvido para auxiliar usuários que desejam reduzir ou abandonar o uso de cigarros eletrônicos. O projeto busca oferecer ferramentas simples e acessíveis que auxiliem no enfrentamento da vontade de fumar, incentivando hábitos mais saudáveis por meio do acompanhamento da jornada do usuário.
 
-### 🔹 Escopo do Produto  
-**Descrição:**  
-Aplicativo para Android/iOS com autenticação, monitoramento, exercícios guiados e informações educativas.
+### 🔹 Objetivo
 
-**Principais Entregas:**  
-- MVP funcional em React Native  
-- Tela de monitoramento  
-- Exercícios de respiração  
-- Metas personalizadas  
-- Recompensas  
-- Tela informacional  
+Oferecer uma ferramenta digital que auxilie usuários no processo de redução ou abandono do uso de cigarros eletrônicos, promovendo conscientização e acompanhamento da evolução individual.
 
-### 🔹 Critérios de Aceite  
-- Usuário consegue cadastrar e fazer login  
-- Todas as telas acessíveis sem erros  
-- Monitoramento exibe dados corretos  
-- Exercício de respiração funciona com animação fluida  
-- Meta salva e exibida corretamente  
-- Conteúdos educativos carregam sem travar  
+### 🔹 Escopo do Produto
+
+**Descrição:**
+
+Aplicativo mobile desenvolvido com React Native e Firebase, permitindo o cadastro e autenticação de usuários, acompanhamento da jornada de resistência ao uso do cigarro eletrônico e acesso a ferramentas de apoio durante o processo de cessação.
+
+### Funcionalidades Implementadas
+
+* Cadastro de usuários;
+* Login de usuários;
+* Recuperação de senha;
+* Cadastro de nome/apelido;
+* Tela inicial personalizada;
+* Exercício guiado de respiração;
+* Registro de resistências ao cigarro eletrônico;
+* Jornada do usuário com acompanhamento da evolução.
+
+### Funcionalidades Futuras
+
+* Metas personalizadas;
+* Sistema de recompensas;
+* Perfil do usuário;
+* Tela informacional sobre cigarros eletrônicos.
+
+### 🔹 Principais Entregas
+
+* MVP funcional desenvolvido em React Native;
+* Integração com Firebase Authentication;
+* Integração com Cloud Firestore;
+* Exercício de respiração guiado;
+* Sistema de registro de resistências;
+* Jornada do usuário;
+* Estrutura preparada para futuras funcionalidades.
+
+### 🔹 Critérios de Aceite
+
+* Usuário consegue criar uma conta e realizar login;
+* Usuário consegue recuperar sua senha;
+* O aplicativo registra corretamente as resistências ao uso do cigarro eletrônico;
+* O exercício de respiração executa sem falhas;
+* Os dados do usuário são armazenados corretamente no Firebase;
+* A jornada do usuário apresenta as informações registradas sem inconsistências.
 
 ---
 

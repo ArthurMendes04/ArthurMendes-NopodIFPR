@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="NoPod - Capa.png" width="600" alt="NoPod - Capa.png">
+  <img src="docs/Design/NoPod - Capa.png" width="600" alt="NoPod - Capa.png">
 </p>
 
 # 📱 NoPod – Aplicativo para Ajudar a Parar o Uso do Cigarro Eletrônico
 
-Repositório oficial do projeto desenvolvido para a disciplina **Projeto Interdisciplinar I** do curso de **Gestão da Tecnologia da Informação – IFPR Campus Pinhais**.
+Repositório oficial do projeto desenvolvido para a disciplina **Projeto Interdisciplinar** do curso de **Gestão da Tecnologia da Informação – IFPR Campus Pinhais**.
 
 ---
 
@@ -125,9 +125,9 @@ O protótipo contempla as principais funcionalidades do aplicativo, incluindo:
 **Protótipo Figma:** https://www.figma.com/proto/EdQdXCP4n99fCRMnscNMli/NoPod?node-id=0-1&t=zsj3O5a35omWvt68-1
 
 <p align="center">
-  <img src="StoryBoard.png" width="30%" />
-  <img src="Persona1.png" width="30%" />
-  <img src="Persona2.png" width="30%" />
+  <img src="docs/Design/StoryBoard.png" width="30%" />
+  <img src="docs/Design/Persona1.png" width="30%" />
+  <img src="docs/Design/Persona2.png" width="30%" />
 </p>
 
 ---
@@ -165,7 +165,7 @@ Espera-se que o NoPod auxilie usuários no processo de redução ou abandono do 
 ```bash
 git clone https://github.com/ArthurMendes04/ArthurMendes-NopodIFPR.git
 
-cd nopod
+cd ArthurMendes-NopodIFPR
 
 npm install
 

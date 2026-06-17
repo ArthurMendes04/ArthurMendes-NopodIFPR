@@ -46,21 +46,21 @@ Aplicativo mobile desenvolvido com React Native e Firebase, permitindo o cadastr
 
 ### Funcionalidades Implementadas
 
-* Cadastro de usuários;
-* Login de usuários;
-* Recuperação de senha;
-* Cadastro de nome/apelido;
-* Tela inicial personalizada;
-* Exercício guiado de respiração;
-* Registro de resistências ao cigarro eletrônico;
-* Jornada do usuário com acompanhamento da evolução.
+* ✅ Cadastro de usuários;
+* ✅ Login de usuários;
+* ✅ Recuperação de senha;
+* ✅ Cadastro de nome/apelido;
+* ✅ Tela inicial personalizada;
+* ✅ Exercício guiado de respiração;
+* ✅ Registro de resistências ao cigarro eletrônico;
+* ✅ Jornada do usuário com acompanhamento da evolução.
 
 ### Funcionalidades Futuras
 
-* Metas personalizadas;
-* Sistema de recompensas;
-* Perfil do usuário;
-* Tela informacional sobre cigarros eletrônicos.
+* 🚧 Metas personalizadas;
+* 🚧 Sistema de recompensas;
+* 🚧 Perfil do usuário;
+* 🚧 Tela informacional sobre cigarros eletrônicos.
 
 ### 🔹 Principais Entregas
 
@@ -129,6 +129,103 @@ O protótipo contempla as principais funcionalidades do aplicativo, incluindo:
   <img src="Persona1.png" width="30%" />
   <img src="Persona2.png" width="30%" />
 </p>
+
+---
+
+# 4. Desenvolvimento
+
+### 🔹 Processo de Software
+
+O desenvolvimento do NoPod seguiu uma abordagem incremental, com planejamento, implementação e validação contínua das funcionalidades. As atividades foram organizadas e acompanhadas por meio de ferramentas de gestão de tarefas, permitindo a evolução gradual do MVP.
+
+### 🔹 Recursos Utilizados
+
+**Tecnologias**
+
+* React Native
+* Expo
+* TypeScript
+* Firebase Authentication
+* Cloud Firestore
+* Firebase Storage
+
+**Ferramentas**
+
+* GitHub
+* Figma
+* VS Code
+* Android Studio
+
+### 🔹 Resultados Esperados
+
+Espera-se que o NoPod auxilie usuários no processo de redução ou abandono do uso de cigarros eletrônicos, oferecendo ferramentas de apoio que incentivem hábitos mais saudáveis e permitam acompanhar a evolução do usuário ao longo do tempo.
+
+### 🔹 Instruções para Download e Execução
+
+```bash
+git clone <url-do-repositorio>
+
+cd nopod
+
+npm install
+
+npx expo start
+```
+
+Após iniciar o projeto, utilize o aplicativo Expo Go ou um emulador Android para executar a aplicação.
+
+### 🔹 Licença de Uso e Distribuição
+
+Este projeto foi desenvolvido para fins acadêmicos no curso de Gestão da Tecnologia da Informação do IFPR – Campus Pinhais. Sua utilização deve respeitar os objetivos educacionais e os direitos dos autores.
+
+# 5. Gestão do Projeto
+
+### 🔹 Contexto Sequenciador
+
+O desenvolvimento do NoPod foi organizado de forma incremental, permitindo a evolução gradual do produto a partir de um MVP.
+
+**MVP**
+
+* Cadastro de usuários;
+* Login;
+* Recuperação de senha;
+* Cadastro de nome/apelido;
+* Tela inicial.
+
+**Incrementos**
+
+* Exercício de respiração;
+* Registro de resistências;
+* Jornada do usuário.
+
+**Incrementos Futuros**
+
+* Metas personalizadas;
+* Sistema de recompensas;
+* Perfil do usuário;
+* Tela informacional.
+
+### 🔹 Detalhamento das Atividades (Kanban)
+
+O gerenciamento das atividades foi realizado por meio da ferramenta Trello, utilizando a metodologia Kanban para organização, acompanhamento e controle das tarefas do projeto.
+
+As atividades foram distribuídas em colunas que representam o fluxo de desenvolvimento, permitindo visualizar o andamento das funcionalidades e facilitar o planejamento das próximas entregas.
+
+### 🔹 Cronograma
+
+O cronograma do projeto foi definido de acordo com as etapas da disciplina e a evolução do desenvolvimento do produto, contemplando a concepção, prototipação, implementação do MVP e os incrementos planejados para versões futuras.
+
+---
+
+# 6. Métricas para Monitoração e Acompanhamento do Projeto
+
+As métricas definidas para acompanhamento do projeto têm como objetivo avaliar a utilização do aplicativo e a efetividade das funcionalidades implementadas.
+
+### 🔹 Métricas de Desenvolvimento
+
+* Funcionalidades concluídas em relação às planejadas;
+* Correções realizadas durante o desenvolvimento;
+* Evolução das entregas previstas para o MVP e incrementos futuros.
 
 # Extras
 ⚙️ Diagramas de caso de uso e atividades podem ser encontrados no documento "Designer da solução do produto.pdf"

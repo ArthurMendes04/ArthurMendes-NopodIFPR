@@ -225,7 +225,51 @@ As métricas definidas para acompanhamento do projeto têm como objetivo avaliar
 
 * Funcionalidades concluídas em relação às planejadas;
 * Correções realizadas durante o desenvolvimento;
-* Evolução das entregas previstas para o MVP e incrementos futuros.
+* Evolução das entregas previstas para o MVP e incrementos futuros;
+* Throughput;
+* Lead Time;
+* Cycle Time;
+* Response Time.
+
+---
+
+# 7. Extensão
+
+### 🔹 Ação de Extensão
+
+Workshop de UX/UI e Prototipagem Digital com Figma para Jovens e Empreendedores de Pinhais.
+
+### 🔹 ODS Relacionado
+
+ODS 4 – Educação de Qualidade.
+
+### 🔹 Objetivo
+
+Promover inclusão digital e capacitação tecnológica por meio do ensino de conceitos de UX/UI Design e prototipação utilizando Figma.
+
+---
 
 # Extras
-⚙️ Diagramas de caso de uso e atividades podem ser encontrados no documento "Designer da solução do produto.pdf"
+
+### 🔹 Modelagem UML
+
+O projeto possui os seguintes diagramas:
+
+* Casos de Uso;
+* Diagrama de Classes;
+* Diagrama de Atividades;
+* Diagrama de Sequência.
+
+### 🔹 Modelagem de Banco de Dados
+
+O banco de dados foi modelado utilizando Firebase Firestore, contemplando as coleções:
+
+* Users;
+* History.
+
+### 🔹 Documentação Complementar
+
+* Diagramas UML;
+* DER e Modelo de Dados;
+* Relatórios de Sprint;
+* Materiais de validação com usuários.

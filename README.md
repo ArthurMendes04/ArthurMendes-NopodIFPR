@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/Design/NoPod - Capa.png" width="600" alt="NoPod - Capa.png">
+  <img src="Docs/Design/NoPod - Capa.png" width="600" alt="NoPod - Capa.png">
 </p>
 
 # 📱 NoPod – Aplicativo para Ajudar a Parar o Uso do Cigarro Eletrônico
@@ -125,9 +125,9 @@ O protótipo contempla as principais funcionalidades do aplicativo, incluindo:
 **Protótipo Figma:** https://www.figma.com/proto/EdQdXCP4n99fCRMnscNMli/NoPod?node-id=0-1&t=zsj3O5a35omWvt68-1
 
 <p align="center">
-  <img src="docs/Design/StoryBoard.png" width="30%" />
-  <img src="docs/Design/Persona1.png" width="30%" />
-  <img src="docs/Design/Persona2.png" width="30%" />
+  <img src="Docs/Design/StoryBoard.png" width="30%" />
+  <img src="Docs/Design/Persona1.png" width="30%" />
+  <img src="Docs/Design/Persona2.png" width="30%" />
 </p>
 
 ---

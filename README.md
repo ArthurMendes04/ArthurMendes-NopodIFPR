@@ -83,22 +83,46 @@ Aplicativo mobile desenvolvido com React Native e Firebase, permitindo o cadastr
 
 ---
 
-# 3. Matriz de Riscos
+# 3. Design do Software
 
-| ID | Risco | Tipo | Impacto | Prob. | Plano de Resposta |
-|----|-------|------|---------|-------|--------------------|
-| R01 | Atraso no desenvolvimento | Projeto | Médio | Médio | Reorganizar backlog, priorizar MVP |
-| R02 | Falha no Firebase | Técnico | Alto | Baixo | Backup local temporário e testes frequentes |
-| R03 | Interface pouco intuitiva | Negócio | Médio | Médio | Testes com usuários + ajustes |
-| R04 | Problemas de performance | Técnico | Médio | Médio | Otimização de código, compressão de imagens |
+### 🔹 Design Centrado no Usuário
 
----
+O desenvolvimento do NoPod foi baseado nos princípios do Design Centrado no Usuário (DCU), buscando compreender as necessidades, dificuldades e expectativas do público-alvo. Para isso, foi realizado um formulário de pesquisa com potenciais usuários, permitindo identificar hábitos relacionados ao uso de cigarros eletrônicos e possíveis funcionalidades de apoio para o processo de redução ou abandono do consumo.
 
-# 4. Design do Software
-- **Design Centrado no Usuário** (Formulário): https://forms.gle/2Wo5ryF5x1nNVgA8A
-- **Protótipo feito no Figma** https://www.figma.com/proto/EdQdXCP4n99fCRMnscNMli/NoPod?node-id=0-1&t=zsj3O5a35omWvt68-1
-- **Storyboard**
-- **Personas** 
+**Formulário utilizado:** https://forms.gle/2Wo5ryF5x1nNVgA8A
+
+### 🔹 Personas
+
+As personas representam os perfis de usuários considerados durante o desenvolvimento do NoPod, auxiliando na definição das funcionalidades e na construção de uma experiência alinhada às necessidades do público-alvo.
+
+### 🔹 Mapa de Empatia
+
+O mapa de empatia foi utilizado para compreender melhor as necessidades, sentimentos, desafios e expectativas dos usuários em relação ao processo de redução do uso de cigarros eletrônicos. Essa ferramenta auxiliou na definição das funcionalidades e na construção da experiência do usuário dentro do aplicativo.
+
+### 🔹 Storyboard
+
+O storyboard foi desenvolvido para representar visualmente o contexto de utilização do aplicativo, demonstrando situações do cotidiano em que o usuário pode recorrer ao NoPod como ferramenta de apoio durante momentos de vontade de fumar.
+
+### 🔹 Guia de Estilo (UI Design)
+
+A interface do NoPod foi desenvolvida com foco em simplicidade, clareza e facilidade de uso. A identidade visual utiliza predominantemente tons de azul, transmitindo sensação de tranquilidade e confiança. Os elementos seguem um padrão consistente, com botões intuitivos, tipografia legível e navegação objetiva, proporcionando uma experiência agradável ao usuário.
+
+### 🔹 Prototipação do MVP
+
+O protótipo do MVP foi desenvolvido utilizando a ferramenta Figma, permitindo a validação da navegação, organização das telas e experiência do usuário antes da implementação.
+
+O protótipo contempla as principais funcionalidades do aplicativo, incluindo:
+
+* Tela de Login;
+* Tela de Cadastro;
+* Recuperação de Senha;
+* Cadastro de Nome/Apelido;
+* Tela Inicial;
+* Exercício de Respiração;
+* Tela de Parabéns;
+* Jornada do Usuário.
+
+**Protótipo Figma:** https://www.figma.com/proto/EdQdXCP4n99fCRMnscNMli/NoPod?node-id=0-1&t=zsj3O5a35omWvt68-1
 
 <p align="center">
   <img src="StoryBoard.png" width="30%" />

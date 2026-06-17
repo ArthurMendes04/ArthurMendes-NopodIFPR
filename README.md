@@ -163,7 +163,7 @@ Espera-se que o NoPod auxilie usuários no processo de redução ou abandono do 
 ### 🔹 Instruções para Download e Execução
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/ArthurMendes04/ArthurMendes-NopodIFPR.git
 
 cd nopod
 

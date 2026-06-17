@@ -10,19 +10,21 @@ Repositório oficial do projeto desenvolvido para a disciplina **Projeto Interdi
 
 # 1. Identificação
 
-### 🔹 Identidade visual  
-Logotipo disponível no topo do README e em `/assets/logo/`.
+### 🔹 Identidade visual
 
-### 🔹 Equipe  
-| Nome | Papel | Responsabilidades |
-|------|--------|------------------|
-| **Arthur Mendes de Vasconcelos** | Product Ower e UX/UI Designer | Visão do produto, protótipos, telas, UX/UI |
-| **Kaoan Eduardo Pigaiani de Matos** | Desenvolvedor | Front-End e Back End | Firebase, autenticação, banco de dados |
+A identidade visual do projeto NoPod está representada pelo logotipo disponível no topo deste README e nos arquivos do repositório.
 
-### 🔹 Forma de comunicação  
-- Reuniões semanais presenciais e online
-- Grupo no WhatsApp  
-- Tarefas organizadas no Notion  
+### 🔹 Equipe
+
+| Nome                             | Papel                                         | Responsabilidades                                                                                                                                               |
+| -------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Arthur Mendes de Vasconcelos** | Product Owner, UX/UI Designer e Desenvolvedor | Concepção do produto, prototipação, definição da experiência do usuário, desenvolvimento das telas, implementação das funcionalidades e integração com Firebase |
+
+### 🔹 Forma de comunicação
+
+* Organização das tarefas por meio de ferramentas digitais de apoio ao projeto;
+* Registro das decisões e avanços no repositório do GitHub;
+* Acompanhamento das etapas de desenvolvimento conforme a evolução do projeto.
 
 ---
 

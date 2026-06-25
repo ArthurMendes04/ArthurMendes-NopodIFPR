@@ -267,9 +267,18 @@ O banco de dados foi modelado utilizando Firebase Firestore, contemplando as col
 * Users;
 * History.
 
-### 🔹 Documentação Complementar
+# 📄 Documentação do Projeto
 
-* Diagramas UML;
-* DER e Modelo de Dados;
-* Relatórios de Sprint;
-* Materiais de validação com usuários.
+### Projeto
+- [Relatório Final](Docs/Projeto/Relatorio_Final_Nopod.pdf)
+- [Proposta do Projeto Interdisciplinar](Docs/Projeto/Proposta%20do%20Projeto%20Interdisciplinar.pdf)
+- [Designer da Solução do Produto](Docs/Projeto/Designer%20da%20solução%20do%20produto.pdf)
+
+### Modelagem
+- [Modelagem de Banco de Dados](Docs/Banco/Modelagem_Banco.pdf)
+- [Casos de Uso](Docs/UML/Casos_de_Uso.pdf)
+- [Diagrama UML](Docs/UML/Diagrama_UML.pdf)
+
+### Gestão
+- [Relatório Sprint 4](Docs/Sprints/Relatório_de_Desempenho_do_Projeto__Sprint_4.pdf)
+- [Ação de Extensão](Docs/Extensao/Ação_de_Extensão.pdf)

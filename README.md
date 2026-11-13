@@ -20,6 +20,8 @@ A identidade visual do projeto NoPod está representada pelo logotipo disponíve
 | -------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Arthur Mendes de Vasconcelos** | Product Owner, UX/UI Designer e Desenvolvedor | Concepção do produto, prototipação, definição da experiência do usuário, desenvolvimento das telas, implementação das funcionalidades e integração com Firebase |
 
+**Professores orientadores (2026):** Lauriana Paludo e Fabricio Loreni da Silva Cerutti.
+
 ### 🔹 Forma de comunicação
 
 * Organização das tarefas por meio de ferramentas digitais de apoio ao projeto;
@@ -237,15 +239,19 @@ As métricas definidas para acompanhamento do projeto têm como objetivo avaliar
 
 ### 🔹 Ação de Extensão
 
-Workshop de UX/UI e Prototipagem Digital com Figma para Jovens e Empreendedores de Pinhais.
+Apresentação oral e demonstração do MVP do NoPod no **VI SciTec 2026** (Seminário de Ciência e Tecnologia do IFPR Campus Pinhais), aberto a estudantes, docentes, pesquisadores e comunidade externa. O relato da experiência está em [Relatório da Ação de Extensão](Docs/Extensao/Relatorio_Extensao_SciTec_2026.pdf).
 
 ### 🔹 ODS Relacionado
 
-ODS 4 – Educação de Qualidade.
+ODS 3 – Saúde e Bem-Estar.
 
 ### 🔹 Objetivo
 
-Promover inclusão digital e capacitação tecnológica por meio do ensino de conceitos de UX/UI Design e prototipação utilizando Figma.
+Compartilhar o projeto com a comunidade acadêmica e externa, coletar percepções e sugestões sobre o tema e as funcionalidades do aplicativo e usar esse retorno para orientar a evolução do NoPod.
+
+### 🔹 Produto Educacional
+
+[Cartilha Educativa – Cigarros Eletrônicos e o NoPod](Docs/Projeto/Guia_Educativo_Cigarros_Eletronicos_NoPod.pdf): guia de 4 páginas sobre como o cigarro eletrônico funciona, seus efeitos no organismo, gatilhos do hábito e estratégias práticas para reduzir e parar.
 
 ---
 
@@ -273,6 +279,10 @@ O banco de dados foi modelado utilizando Firebase Firestore, contemplando as col
 - [Relatório Final](Docs/Projeto/Relatorio_Final_Nopod.pdf)
 - [Proposta do Projeto Interdisciplinar](Docs/Projeto/Proposta%20do%20Projeto%20Interdisciplinar.pdf)
 - [Designer da Solução do Produto](Docs/Projeto/Designer%20da%20solução%20do%20produto.pdf)
+- [Artigo PIII](Docs/Projeto/Artigo_PIII_NoPod.pdf) ([versão editável](Docs/Projeto/Artigo_PIII_NoPod.docx))
+- [Plano de Negócios](Docs/Projeto/Plano_de_Negocios_NoPod.pdf) ([versão editável](Docs/Projeto/Plano_de_Negocios_NoPod.docx))
+- [Cartilha Educativa (produto educacional)](Docs/Projeto/Guia_Educativo_Cigarros_Eletronicos_NoPod.pdf)
+- [Apresentação V WIPEX 2026](Docs/Apresentacao/NoPod_Apresentacao_WIPEX_2026.pptx)
 
 ### Modelagem
 - [Modelagem de Banco de Dados](Docs/Banco/Modelagem_Banco.pdf)
@@ -281,4 +291,6 @@ O banco de dados foi modelado utilizando Firebase Firestore, contemplando as col
 
 ### Gestão
 - [Relatório Sprint 4](Docs/Sprints/Relatório_de_Desempenho_do_Projeto__Sprint_4.pdf)
-- [Ação de Extensão](Docs/Extensao/Ação_de_Extensão.pdf)
+
+### Extensão
+- [Relatório da Ação de Extensão – VI SciTec 2026](Docs/Extensao/Relatorio_Extensao_SciTec_2026.pdf)

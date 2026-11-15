@@ -20,6 +20,7 @@ import { colors } from "../../styles/colors";
 import { styles } from "../../styles/homeStyles";
 import { showAlert } from "../../utils/showAlert";
 import { getUserProfile } from "../../services/firebase/user";
+import { HealthDisclaimer } from "../../components/HealthDisclaimer";
 
 export default function Home() {
   /*  const [selectedDays, setSelectedDays] = useState({
@@ -238,6 +239,8 @@ export default function Home() {
             <Text style={styles.smokeButtonText}>NÃO FUMAR</Text>
           </Pressable>
         </View>
+
+        <HealthDisclaimer />
       </ScrollView>
     </LinearGradient>
   );

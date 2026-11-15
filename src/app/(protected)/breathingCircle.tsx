@@ -4,6 +4,7 @@ import { useRouter } from "expo-router";
 import React, { useEffect, useRef, useState } from "react";
 import { auth } from "../../firebaseConfig";
 import { registerResistedEvent } from "../../services/firebase/user";
+import { HealthDisclaimer } from "../../components/HealthDisclaimer";
 import { showAlert } from "../../utils/showAlert";
 import {
   Animated,
@@ -112,6 +113,7 @@ export default function BreathingCircle() {
             </Text>
           </Pressable>
 
+          <HealthDisclaimer extra="Se sentir tontura ou falta de ar, pare o exercício e respire normalmente." />
         </ScrollView>
       </SafeAreaView>
     </LinearGradient>

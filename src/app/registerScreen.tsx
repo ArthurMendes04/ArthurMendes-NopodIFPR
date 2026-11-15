@@ -5,6 +5,7 @@ import { register } from "../services/firebase/auth";
 import { createUserProfile } from "../services/firebase/user";
 import { buildConsentRecord } from "../services/firebase/consent";
 import { ConsentCheckbox } from "../components/ConsentCheckbox";
+import { HealthDisclaimer } from "../components/HealthDisclaimer";
 import { LegalDocumentModal } from "../components/LegalDocumentView";
 import { HEALTH_CONSENT, TERMS_OF_USE } from "../legal/legalTexts";
 import {
@@ -151,6 +152,10 @@ export default function RegisterScreen() {
         value={password}
         onChangeText={setPassword}
       />
+
+      <View style={{ width: 300, marginBottom: 10 }}>
+        <HealthDisclaimer />
+      </View>
 
       <ConsentCheckbox
         checked={termsAccepted}

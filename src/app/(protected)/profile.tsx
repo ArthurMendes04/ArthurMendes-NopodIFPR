@@ -13,6 +13,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { HealthDisclaimer } from "../../components/HealthDisclaimer";
 import { LegalDocumentModal } from "../../components/LegalDocumentView";
 import { auth } from "../../firebaseConfig";
 import { DPO_EMAIL, HEALTH_CONSENT, TERMS_OF_USE } from "../../legal/legalTexts";
@@ -138,6 +139,8 @@ export default function Profile() {
             <Text style={styles.linkText}>Falar com o encarregado de dados</Text>
           </Pressable>
         </View>
+
+        <HealthDisclaimer />
 
         <Pressable style={styles.button} onPress={handleLogout}>
           <Text style={styles.buttonText}>Sair</Text>

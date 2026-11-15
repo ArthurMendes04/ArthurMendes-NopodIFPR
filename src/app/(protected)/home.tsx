@@ -20,6 +20,7 @@ import { colors } from "../../styles/colors";
 import { styles } from "../../styles/homeStyles";
 import { showAlert } from "../../utils/showAlert";
 import { getUserProfile } from "../../services/firebase/user";
+import { HealthDisclaimer } from "../../components/HealthDisclaimer";
 
 export default function Home() {
   /*  const [selectedDays, setSelectedDays] = useState({
@@ -177,7 +178,13 @@ export default function Home() {
         </View>
 
         <View style={styles.logoutContainer}>
-          <Pressable onPress={handleLogout}>
+          <Pressable
+            onPress={() => router.push("/profile")}
+            accessibilityLabel="Perfil"
+          >
+            <MaterialIcons name="account-circle" size={30} color="white" />
+          </Pressable>
+          <Pressable onPress={handleLogout} accessibilityLabel="Sair">
             <MaterialIcons name="logout" size={30} color="white" />
           </Pressable>
         </View>
@@ -232,6 +239,8 @@ export default function Home() {
             <Text style={styles.smokeButtonText}>NÃO FUMAR</Text>
           </Pressable>
         </View>
+
+        <HealthDisclaimer />
       </ScrollView>
     </LinearGradient>
   );

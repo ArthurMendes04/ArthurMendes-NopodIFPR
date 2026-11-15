@@ -7,6 +7,12 @@ export const styles = StyleSheet.create({
     paddingTop: 40,
     paddingHorizontal: 20,
     alignItems: "center",
+  },
+
+  scrollContent: {
+    flexGrow: 1,
+    alignItems: "center",
+    paddingBottom: 30,
     gap: 5,
   },
 

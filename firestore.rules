@@ -1,0 +1,141 @@
+rules_version = '2';
+
+// Regras de segurança do NoPod (ajuste pedido pela banca / LGPD art. 46).
+// Princípios:
+//  - tudo é negado por padrão;
+//  - cada pessoa só lê e altera os próprios dados (users/{uid});
+//  - campos e tipos são validados para impedir gravação de dados arbitrários;
+//  - dados de saúde (history) só podem ser gravados com consentimento
+//    registrado (LGPD art. 11);
+//  - o cadastro exige 18 anos ou mais também no servidor.
+//
+// Publicar: firebase deploy --only firestore:rules
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return signedIn() && request.auth.uid == userId;
+    }
+
+    // ---------- Validações ----------
+
+    function isAdultBirthDate(value) {
+      return value is string
+        && value.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && isAdultDate(
+             int(value.split('-')[0]),
+             int(value.split('-')[1]),
+             int(value.split('-')[2]));
+    }
+
+    // 18º aniversário <= agora. Quem nasceu em 29/02 completa 18 anos em 01/03
+    // quando o ano não é bissexto.
+    function isAdultDate(y, m, d) {
+      return m >= 1 && m <= 12 && d >= 1 && d <= 31
+        && (
+          (m == 2 && d == 29 && timestamp.date(y + 18, 3, 1) <= request.time)
+          || (!(m == 2 && d == 29) && timestamp.date(y + 18, m, d) <= request.time)
+        );
+    }
+
+    function isAcceptance(value) {
+      return value is map
+        && value.keys().hasOnly(['version', 'acceptedAt'])
+        && value.version is string
+        && value.acceptedAt is timestamp;
+    }
+
+    function hasValidConsents(data) {
+      return data.consents is map
+        && data.consents.keys().hasOnly(['terms', 'healthData'])
+        && isAcceptance(data.consents.terms)
+        && isAcceptance(data.consents.healthData);
+    }
+
+    function isCount(value) {
+      return value is int && value >= 0;
+    }
+
+    function isOptionalTimestamp(value) {
+      return value == null || value is timestamp;
+    }
+
+    function allowedUserKeys() {
+      return [
+        'name', 'email', 'birthDate', 'createdAt',
+        'currentStreak', 'longestStreak', 'totalResisted', 'totalSmoked',
+        'lastSmokeDate', 'lastResistanceDate', 'consents'
+      ];
+    }
+
+    // Valida os campos listados em `keys` (no cadastro: todos; na
+    // atualização: só os alterados, para não travar contas antigas).
+    function validUserFields(data, keys) {
+      return (!('name' in keys) || (data.name is string && data.name.size() > 0 && data.name.size() <= 100))
+        && (!('email' in keys) || data.email == request.auth.token.email)
+        && (!('createdAt' in keys) || data.createdAt is timestamp)
+        && (!('currentStreak' in keys) || isCount(data.currentStreak))
+        && (!('longestStreak' in keys) || isCount(data.longestStreak))
+        && (!('totalResisted' in keys) || isCount(data.totalResisted))
+        && (!('totalSmoked' in keys) || isCount(data.totalSmoked))
+        && (!('lastSmokeDate' in keys) || isOptionalTimestamp(data.lastSmokeDate))
+        && (!('lastResistanceDate' in keys) || isOptionalTimestamp(data.lastResistanceDate));
+    }
+
+    function userHasHealthConsent(userId) {
+      let user = get(/databases/$(database)/documents/users/$(userId)).data;
+      return 'consents' in user && hasValidConsents(user);
+    }
+
+    // ---------- Coleções ----------
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+
+      // Cadastro: exige maior de 18 anos e os aceites (Termos + saúde).
+      allow create: if isOwner(userId)
+        && request.resource.data.keys().hasOnly(allowedUserKeys())
+        && isAdultBirthDate(request.resource.data.birthDate)
+        && hasValidConsents(request.resource.data)
+        && validUserFields(request.resource.data, request.resource.data.keys());
+
+      // Atualização: só campos conhecidos; a data de nascimento não pode
+      // ser trocada depois de definida (evita burlar a idade mínima).
+      allow update: if isOwner(userId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(allowedUserKeys())
+        && (!('birthDate' in request.resource.data.diff(resource.data).affectedKeys())
+            || (!('birthDate' in resource.data)
+                && isAdultBirthDate(request.resource.data.birthDate)))
+        && (!('consents' in request.resource.data.diff(resource.data).affectedKeys())
+            || hasValidConsents(request.resource.data))
+        && validUserFields(request.resource.data,
+             request.resource.data.diff(resource.data).affectedKeys());
+
+      // Exclusão de conta pelo Perfil (LGPD art. 18).
+      allow delete: if isOwner(userId);
+
+      // Histórico de resistências/recaídas: dado de saúde.
+      match /history/{eventId} {
+        allow read, delete: if isOwner(userId);
+
+        allow create: if isOwner(userId)
+          && userHasHealthConsent(userId)
+          && request.resource.data.keys().hasOnly(['type', 'createdAt'])
+          && request.resource.data.type in ['resisted', 'smoked']
+          && request.resource.data.createdAt is timestamp;
+
+        // Registros não são editados, apenas criados ou apagados.
+        allow update: if false;
+      }
+    }
+
+    // Qualquer outro caminho é negado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

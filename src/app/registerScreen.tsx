@@ -3,6 +3,10 @@ import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { register } from "../services/firebase/auth";
 import { createUserProfile } from "../services/firebase/user";
+import { buildConsentRecord } from "../services/firebase/consent";
+import { ConsentCheckbox } from "../components/ConsentCheckbox";
+import { LegalDocumentModal } from "../components/LegalDocumentView";
+import { HEALTH_CONSENT } from "../legal/legalTexts";
 import {
   Image,
   Pressable,
@@ -28,6 +32,8 @@ export default function RegisterScreen() {
   const [birthDate, setBirthDate] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [healthConsent, setHealthConsent] = useState(false);
+  const [openDocument, setOpenDocument] = useState<"health" | null>(null);
 
   const signUp = async () => {
   if (!userName.trim()) return showAlert("Erro", "Digite seu nome");
@@ -50,6 +56,11 @@ export default function RegisterScreen() {
 
   if (!email.trim()) return showAlert("Erro", "Digite seu e-mail");
   if (!password.trim()) return showAlert("Erro", "Digite sua senha");
+  if (!healthConsent)
+    return showAlert(
+      "Consentimento necessário",
+      "Para usar o NoPod, leia e aceite o consentimento para tratamento de dados de saúde."
+    );
 
   try {
     const userCredential = await register(email, password);
@@ -65,6 +76,7 @@ export default function RegisterScreen() {
     totalResisted: 0,
     totalSmoked: 0,
     lastSmokeDate: null,
+    consents: buildConsentRecord(),
   });
 
     showAlert("Sucesso", "Usuário cadastrado!", [
@@ -132,6 +144,15 @@ export default function RegisterScreen() {
         onChangeText={setPassword}
       />
 
+      <ConsentCheckbox
+        highlighted
+        checked={healthConsent}
+        label="Autorizo o tratamento dos meus dados de saúde (hábito de fumar e registros de resistência) para acompanhar meu progresso no NoPod."
+        linkLabel="Ler o consentimento (LGPD, art. 11)"
+        onOpenDocument={() => setOpenDocument("health")}
+        onUncheck={() => setHealthConsent(false)}
+      />
+
       <View style={styles.containerButton}>
         <Pressable style={styles.loginPressable} onPress={signUp}>
           <Text style={styles.loginButtonText}>Cadastrar</Text>
@@ -147,6 +168,16 @@ export default function RegisterScreen() {
         </Pressable>
       </View>
       </ScrollView>
+
+      <LegalDocumentModal
+        visible={openDocument === "health"}
+        document={HEALTH_CONSENT}
+        onAccept={() => {
+          setHealthConsent(true);
+          setOpenDocument(null);
+        }}
+        onClose={() => setOpenDocument(null)}
+      />
     </LinearGradient>
   );
 }

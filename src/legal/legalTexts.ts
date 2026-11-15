@@ -2,8 +2,8 @@
 // Ao alterar o conteúdo de um documento, aumente a versão correspondente:
 // quem aceitou uma versão anterior será solicitado a aceitar de novo.
 
-// TODO: substituir pelo e-mail real do encarregado de dados (art. 41 da LGPD).
-export const DPO_EMAIL = "[seu e-mail]";
+// E-mail do encarregado pelo tratamento de dados pessoais (art. 41 da LGPD).
+export const DPO_EMAIL = "arthurvasconcelos7@gmail.com";
 
 export const HEALTH_CONSENT_VERSION = "1.0";
 export const TERMS_VERSION = "1.0";

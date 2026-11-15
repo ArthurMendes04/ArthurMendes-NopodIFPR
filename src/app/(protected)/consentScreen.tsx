@@ -4,6 +4,7 @@ import { router } from "expo-router";
 import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from "react-native";
+import { useConsentGate } from "../../components/ConsentGate";
 import { LegalDocumentView } from "../../components/LegalDocumentView";
 import { auth } from "../../firebaseConfig";
 import { HEALTH_CONSENT, TERMS_OF_USE } from "../../legal/legalTexts";
@@ -19,6 +20,7 @@ export default function ConsentScreen() {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [healthConsent, setHealthConsent] = useState(false);
   const [saving, setSaving] = useState(false);
+  const { markConsentAccepted } = useConsentGate();
 
   const canContinue = termsAccepted && healthConsent;
 
@@ -28,6 +30,7 @@ export default function ConsentScreen() {
     try {
       setSaving(true);
       await saveConsents(user.uid);
+      markConsentAccepted();
       router.replace("/home");
     } catch (error: any) {
       console.error("Erro ao salvar consentimento:", error);

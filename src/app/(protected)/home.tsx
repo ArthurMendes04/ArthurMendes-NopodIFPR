@@ -177,7 +177,13 @@ export default function Home() {
         </View>
 
         <View style={styles.logoutContainer}>
-          <Pressable onPress={handleLogout}>
+          <Pressable
+            onPress={() => router.push("/profile")}
+            accessibilityLabel="Perfil"
+          >
+            <MaterialIcons name="account-circle" size={30} color="white" />
+          </Pressable>
+          <Pressable onPress={handleLogout} accessibilityLabel="Sair">
             <MaterialIcons name="logout" size={30} color="white" />
           </Pressable>
         </View>

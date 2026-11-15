@@ -14,6 +14,8 @@ export const styles = StyleSheet.create({
     position: "absolute",
     top: 77,
     right: 20,
+    flexDirection: "row",
+    gap: 16,
   },
 
   informations: {

@@ -6,7 +6,7 @@ import { createUserProfile } from "../services/firebase/user";
 import { buildConsentRecord } from "../services/firebase/consent";
 import { ConsentCheckbox } from "../components/ConsentCheckbox";
 import { LegalDocumentModal } from "../components/LegalDocumentView";
-import { HEALTH_CONSENT } from "../legal/legalTexts";
+import { HEALTH_CONSENT, TERMS_OF_USE } from "../legal/legalTexts";
 import {
   Image,
   Pressable,
@@ -32,8 +32,11 @@ export default function RegisterScreen() {
   const [birthDate, setBirthDate] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [healthConsent, setHealthConsent] = useState(false);
-  const [openDocument, setOpenDocument] = useState<"health" | null>(null);
+  const [openDocument, setOpenDocument] = useState<"terms" | "health" | null>(
+    null
+  );
 
   const signUp = async () => {
   if (!userName.trim()) return showAlert("Erro", "Digite seu nome");
@@ -56,6 +59,11 @@ export default function RegisterScreen() {
 
   if (!email.trim()) return showAlert("Erro", "Digite seu e-mail");
   if (!password.trim()) return showAlert("Erro", "Digite sua senha");
+  if (!termsAccepted)
+    return showAlert(
+      "Termos de Uso",
+      "Para criar a conta, leia e aceite os Termos de Uso e a Política de Privacidade."
+    );
   if (!healthConsent)
     return showAlert(
       "Consentimento necessário",
@@ -145,6 +153,14 @@ export default function RegisterScreen() {
       />
 
       <ConsentCheckbox
+        checked={termsAccepted}
+        label="Li e aceito os Termos de Uso e a Política de Privacidade."
+        linkLabel="Ler os Termos de Uso"
+        onOpenDocument={() => setOpenDocument("terms")}
+        onUncheck={() => setTermsAccepted(false)}
+      />
+
+      <ConsentCheckbox
         highlighted
         checked={healthConsent}
         label="Autorizo o tratamento dos meus dados de saúde (hábito de fumar e registros de resistência) para acompanhar meu progresso no NoPod."
@@ -168,6 +184,16 @@ export default function RegisterScreen() {
         </Pressable>
       </View>
       </ScrollView>
+
+      <LegalDocumentModal
+        visible={openDocument === "terms"}
+        document={TERMS_OF_USE}
+        onAccept={() => {
+          setTermsAccepted(true);
+          setOpenDocument(null);
+        }}
+        onClose={() => setOpenDocument(null)}
+      />
 
       <LegalDocumentModal
         visible={openDocument === "health"}

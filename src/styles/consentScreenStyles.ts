@@ -35,6 +35,32 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
 
+  highlightedCard: {
+    borderWidth: 3,
+    borderColor: colors.pink[100],
+  },
+
+  checkRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 8,
+    marginTop: 6,
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+  },
+
+  checkLabel: {
+    flex: 1,
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#222",
+  },
+
+  disabledButton: {
+    opacity: 0.5,
+  },
+
   button: {
     height: 56,
     width: "100%",

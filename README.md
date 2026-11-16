@@ -55,13 +55,17 @@ Aplicativo mobile desenvolvido com React Native e Firebase, permitindo o cadastr
 * ✅ Tela inicial personalizada;
 * ✅ Exercício guiado de respiração;
 * ✅ Registro de resistências ao cigarro eletrônico;
-* ✅ Jornada do usuário com acompanhamento da evolução.
+* ✅ Jornada do usuário com acompanhamento da evolução;
+* ✅ Verificação de idade no cadastro (somente maiores de 18 anos), com tela de encaminhamento para menores;
+* ✅ Consentimento para dados de saúde e aceite dos Termos de Uso e da Política de Privacidade (LGPD);
+* ✅ Perfil do usuário com exclusão definitiva da conta e dos dados;
+* ✅ Aviso de que o app não substitui acompanhamento profissional;
+* ✅ Regras de segurança do Firestore (cada usuário acessa apenas os próprios dados).
 
 ### Funcionalidades Futuras
 
 * 🚧 Metas personalizadas;
 * 🚧 Sistema de recompensas;
-* 🚧 Perfil do usuário;
 * 🚧 Tela informacional sobre cigarros eletrônicos.
 
 ### 🔹 Principais Entregas
@@ -81,6 +85,9 @@ Aplicativo mobile desenvolvido com React Native e Firebase, permitindo o cadastr
 * O aplicativo registra corretamente as resistências ao uso do cigarro eletrônico;
 * O exercício de respiração executa sem falhas;
 * Os dados do usuário são armazenados corretamente no Firebase;
+* Menores de 18 anos não conseguem criar conta;
+* Dados de saúde só são gravados após o consentimento;
+* O usuário consegue excluir a conta e todos os seus dados pelo Perfil;
 * A jornada do usuário apresenta as informações registradas sem inconsistências.
 
 ---
@@ -270,8 +277,8 @@ O projeto possui os seguintes diagramas:
 
 O banco de dados foi modelado utilizando Firebase Firestore, contemplando as coleções:
 
-* Users;
-* History.
+* Users (perfil, data de nascimento e registro dos consentimentos);
+* History (subcoleção de cada usuário, com os registros de resistência).
 
 # 📄 Documentação do Projeto
 
@@ -279,15 +286,22 @@ O banco de dados foi modelado utilizando Firebase Firestore, contemplando as col
 - [Relatório Final](Docs/Projeto/Relatorio_Final_Nopod.pdf)
 - [Proposta do Projeto Interdisciplinar](Docs/Projeto/Proposta%20do%20Projeto%20Interdisciplinar.pdf)
 - [Designer da Solução do Produto](Docs/Projeto/Designer%20da%20solução%20do%20produto.pdf)
-- [Artigo PIII](Docs/Projeto/Artigo_PIII_NoPod.pdf) ([versão editável](Docs/Projeto/Artigo_PIII_NoPod.docx))
-- [Plano de Negócios](Docs/Projeto/Plano_de_Negocios_NoPod.pdf) ([versão editável](Docs/Projeto/Plano_de_Negocios_NoPod.docx))
+- [Artigo PIII](Docs/Projeto/Artigo_PIII_NoPod.pdf)
+- [Plano de Negócios](Docs/Projeto/Plano_de_Negocios_NoPod.pdf)
+- [Requisitos (versão atualizada)](Docs/Projeto/Requisitos_Atualizados.md)
 - [Cartilha Educativa (produto educacional)](Docs/Projeto/Guia_Educativo_Cigarros_Eletronicos_NoPod.pdf)
 - [Apresentação V WIPEX 2026](Docs/Apresentacao/NoPod_Apresentacao_WIPEX_2026.pptx)
 
 ### Modelagem
-- [Modelagem de Banco de Dados](Docs/Banco/Modelagem_Banco.pdf)
+- [Modelagem de Banco de Dados (versão atualizada)](Docs/Banco/Modelagem_Banco_Atualizada.md)
+- [Modelagem de Banco de Dados (versão anterior)](Docs/Banco/Modelagem_Banco.pdf)
 - [Casos de Uso](Docs/UML/Casos_de_Uso.pdf)
 - [Diagrama UML](Docs/UML/Diagrama_UML.pdf)
+
+### LGPD e proteção de dados
+- [Tratamento de dados e conduta para menores](Docs/LGPD/README.md)
+- [Termos de Uso e Política de Privacidade](Docs/LGPD/Termos_de_Uso_e_Politica_de_Privacidade.md)
+- [Consentimento para dados de saúde](Docs/LGPD/Consentimento_Dados_de_Saude.md)
 
 ### Gestão
 - [Relatório Sprint 4](Docs/Sprints/Relatório_de_Desempenho_do_Projeto__Sprint_4.pdf)

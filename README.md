@@ -181,6 +181,23 @@ npm install
 npx expo start
 ```
 
+Antes de iniciar, crie um arquivo `.env` na raiz do projeto com as credenciais do seu projeto Firebase (o arquivo não é versionado):
+
+```
+EXPO_PUBLIC_API_KEY=...
+EXPO_PUBLIC_AUTH_DOMAIN=...
+EXPO_PUBLIC_PROJECT_ID=...
+EXPO_PUBLIC_STORAGE_BUCKET=...
+EXPO_PUBLIC_MESSAGING_SENDER_ID=...
+EXPO_PUBLIC_APP_ID=...
+```
+
+As regras de segurança do Firestore ficam em `firestore.rules` e são publicadas com o Firebase CLI:
+
+```bash
+firebase deploy --only firestore:rules
+```
+
 Após iniciar o projeto, utilize o aplicativo Expo Go ou um emulador Android para executar a aplicação.
 
 ### 🔹 Licença de Uso e Distribuição
@@ -207,11 +224,18 @@ O desenvolvimento do NoPod foi organizado de forma incremental, permitindo a evo
 * Registro de resistências;
 * Jornada do usuário.
 
+**Ajustes após a banca (LGPD e idade mínima)**
+
+* Verificação de idade no cadastro e bloqueio de menores de 18 anos;
+* Aceite dos Termos de Uso e consentimento para dados de saúde;
+* Perfil do usuário com exclusão de conta;
+* Aviso de que o app não substitui acompanhamento profissional;
+* Regras de segurança do Firestore.
+
 **Incrementos Futuros**
 
 * Metas personalizadas;
 * Sistema de recompensas;
-* Perfil do usuário;
 * Tela informacional.
 
 ### 🔹 Detalhamento das Atividades (Kanban)

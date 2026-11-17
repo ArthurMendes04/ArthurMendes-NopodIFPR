@@ -11,3 +11,13 @@ rsvg-convert -w 2480 Casos_de_Uso.svg -o ../Casos_de_Uso.png
 ```
 
 O `Casos_de_Uso.svg` também pode ser aberto e editado diretamente no navegador, no Inkscape ou no draw.io.
+
+## Diagramas UML (classes, sequência, atividades e visão geral dos casos de uso)
+
+O quadro `Diagrama_UML.pdf` é gerado por `gerar_diagrama_uml.py`, da mesma forma:
+
+```
+python gerar_diagrama_uml.py
+rsvg-convert -f pdf Diagrama_UML.svg -o ../Diagrama_UML.pdf
+rsvg-convert -w 2480 Diagrama_UML.svg -o ../Diagrama_UML.png
+```

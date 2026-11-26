@@ -1,0 +1,41 @@
+# Integração Contínua (CI) do NoPod
+# Roda automaticamente a cada push e a cada Pull Request.
+# Verifica se o código passa no lint, na checagem de tipos (TypeScript)
+# e se o app compila (build da versão web com Expo).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    name: Lint, tipos e build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint (padrão de código)
+        run: npm run lint
+
+      - name: Checagem de tipos (TypeScript)
+        run: npx tsc --noEmit
+
+      - name: Build da versão web
+        run: npx expo export --platform web

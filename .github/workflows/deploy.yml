@@ -40,7 +40,7 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
 
       - name: Build da versão web
         run: npx expo export --platform web

@@ -29,7 +29,7 @@ jobs:
           cache: npm
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install --no-audit --no-fund
 
       - name: Lint (padrão de código)
         run: npm run lint

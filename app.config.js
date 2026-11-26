@@ -58,7 +58,9 @@ export default {
     ],
 
     experiments: {
-      typedRoutes: true
+      typedRoutes: true,
+      // Usado só no deploy web (GitHub Pages publica o site em /<nome-do-repo>)
+      ...(process.env.EXPO_BASE_URL ? { baseUrl: process.env.EXPO_BASE_URL } : {})
     },
 
     extra: {

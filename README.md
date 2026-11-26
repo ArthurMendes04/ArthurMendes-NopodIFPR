@@ -200,6 +200,18 @@ firebase deploy --only firestore:rules
 
 Após iniciar o projeto, utilize o aplicativo Expo Go ou um emulador Android para executar a aplicação.
 
+### 🔹 Integração Contínua (CI) e Deploy
+
+[![CI](https://github.com/ArthurMendes04/ArthurMendes-NopodIFPR/actions/workflows/ci.yml/badge.svg)](https://github.com/ArthurMendes04/ArthurMendes-NopodIFPR/actions/workflows/ci.yml)
+[![Deploy Web](https://github.com/ArthurMendes04/ArthurMendes-NopodIFPR/actions/workflows/deploy.yml/badge.svg)](https://github.com/ArthurMendes04/ArthurMendes-NopodIFPR/actions/workflows/deploy.yml)
+
+O projeto usa **GitHub Actions** para automatizar a verificação e a publicação do código:
+
+* **CI** (`.github/workflows/ci.yml`): a cada *push* ou *Pull Request*, instala as dependências, roda o lint (`npm run lint`), a checagem de tipos do TypeScript (`npx tsc --noEmit`) e o build da versão web (`npx expo export --platform web`). Se alguma etapa falhar, o GitHub sinaliza o problema antes de o código entrar na branch principal.
+* **Deploy** (`.github/workflows/deploy.yml`): a cada *push* na branch `main`, gera a versão web do app e publica no **GitHub Pages**, em <https://arthurmendes04.github.io/ArthurMendes-NopodIFPR/>.
+
+As credenciais do Firebase usadas no deploy ficam nos *Secrets* do repositório (**Settings → Secrets and variables → Actions**), com os mesmos nomes do arquivo `.env`. A chave da API Mistral não é incluída na versão web, porque tudo o que vai para o navegador fica visível ao público.
+
 ### 🔹 Licença de Uso e Distribuição
 
 Este projeto foi desenvolvido para fins acadêmicos no curso de Gestão da Tecnologia da Informação do IFPR – Campus Pinhais. Sua utilização deve respeitar os objetivos educacionais e os direitos dos autores.
